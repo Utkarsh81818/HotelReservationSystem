@@ -2,7 +2,7 @@ package com.bridgelabz;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * Purpose  - Ability to find cheapest hotel for a given data range
+ * Purpose  - Ability to add weekday and weekend rates for each Hotel
  * Author   - Utkarsh Mishra
  * @version - 16.0
  * @since   - 2021-10-12
