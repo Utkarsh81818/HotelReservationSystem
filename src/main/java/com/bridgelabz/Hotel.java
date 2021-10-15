@@ -1,5 +1,7 @@
 package com.bridgelabz;
-
+/**
+ * Purpose - Implementation of setters and getters
+ */
 public class Hotel {
     private String hotelName;
     private String customerType;
