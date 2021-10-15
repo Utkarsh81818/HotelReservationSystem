@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Purpose  - Ability to find the Best Rated Hotel for given data range
+ * Purpose  - Ability to add special rates for reward customers as a part of a Loyality Program
  * Author   - Utkarsh Mishra
  * @version - 16.0
  * @since   - 2021-10-14
@@ -18,12 +18,14 @@ public class HotelReservationSystem {
     public HotelReservationSystem() {
         this.hotels = new ArrayList<>();
     }
+
     /**
      * This method is used to add hotel to the Hotel List
      */
     public boolean addHotel(Hotel hotel) {
         return this.hotels.add(hotel);
     }
+
     /**
      * This method is used to find the cheapest hotel in the HotelList
      *@return - cheapestHotel - The cheapest hotel in the list
@@ -38,6 +40,7 @@ public class HotelReservationSystem {
         System.out.println("The cheapest Hotel is " + cheapestHotel);
         return cheapestHotel;
     }
+
     public void findCheapestHotel_Weekday_Weekend() {
         String hotel = null;
         int totalLakeWoodCost = 0;
@@ -69,6 +72,7 @@ public class HotelReservationSystem {
             System.out.println("RidgeWood with total rates $370.");
         }
     }
+
     public void findCheapestBestRatedHotel() {
         int totalLakeWoodCost = 0, totalBridgeWoodCost = 0, totalRidgeWoodCost= 0;
         int LakeWood_Rate = 3, BridgeWood_Rate = 4, RidgeWood_Rate = 5;
@@ -118,7 +122,26 @@ public class HotelReservationSystem {
             System.out.println("Total Rates: $"+totalRidgeWoodCost);
         }
     }
-
+    public void addRewardCustomerRate(){
+        if (hotel == "LakeWood") {
+            int weekday_rate = 80;
+            int weekend_rate = 80;
+            System.out.println("Weekday Rate of Regular Customers of LakeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of LakeWood Hotel:" + weekend_rate);
+        }
+        if (hotel == "BridgeWood") {
+            int weekday_rate = 110;
+            int weekend_rate = 50;
+            System.out.println("Weekday Rate of Regular Customers of BridgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of BridgeWood Hotel:" + weekend_rate);
+        }
+        if (hotel == "RidgeWood") {
+            int weekday_rate = 110;
+            int weekend_rate = 40;
+            System.out.println("Weekday Rate of Regular Customers of RidgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of RidgeWood Hotel:" + weekend_rate);
+        }
+    }
 
     public static void main(String[] args) throws Exception {
         Hotel hotel1 = new Hotel("LakeWood","Regular", 110,90, 3);
